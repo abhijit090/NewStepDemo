@@ -1,0 +1,62 @@
+{
+  "name": "firstcypressautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "riversand_test": "node_modules\\.bin\\cypress run --spec cypress\\integration\\examples\\BDD\\cfabdd.feature --headed --browser chrome",
+    "Step_test": "node_modules\\.bin\\cypress run --spec cypress\\integration\\examples\\BDD\\cfabdd2.feature --headed --browser chrome",
+    "Create_RWN": "node_modules\\.bin\\cypress run --spec cypress\\integration\\examples\\NavistarC_BDD\\Navisatr_Wf.feature --headed --browser chrome",
+    "Update_WFN": "node_modules\\.bin\\cypress run --spec cypress\\integration\\examples\\NavistarU_BDD\\Navistar_Update.feature --headed --browser chrome",
+    "Linking_VIN": "node_modules\\.bin\\cypress run --spec cypress\\integration\\examples\\Navistar_L_VI\\Navistar_L_VI.feature --headed --browser chrome",
+    "IE_AutoProj": "node_modules\\.bin\\cypress run --spec cypress\\integration\\examples\\IE_Automation\\IE_Automations.feature --headed --browser chrome",
+    "Timken_AutoProj": "node_modules\\.bin\\cypress run --spec cypress\\integration\\examples\\Timken_WF\\Timkin_W.feature --headed --browser chrome",
+    "Timken_LinkProj": "node_modules\\.bin\\cypress run --spec cypress\\integration\\examples\\Timken_LinkProduct\\Timken_LinkProd.feature --headed --browser chrome",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run_spec": "npx cypress run --spec cypress\\integration\\examples\\BDD\\cfabdd2.feature ",
+    "headed": "npx run cy:run_spec -- --headed --browser chrome & npm run cy:run_spec -- --headed --browser electron",
+    "chrome": "npx run test -- --headed browser firefox",
+    "generatereports": "npm run test -- --reporter mochawesome --browser chrome --headed",
+    "cy:report": "cypress run"
+  },
+  "author": "sagar",
+  "license": "ISC",
+  "devDependencies": {
+    "@serenity-js/core": "^3.2.1",
+    "cypress": "^12.10.0",
+    "cypress-localstorage-commands": "^2.2.2",
+    "cypress-mochawesome-reporter": "^3.2.3",
+    "cypress-multi-reporters": "^1.6.2",
+    "neat-csv": "^5.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": [
+      
+      "C://Users//Abhijit.Jadhav//Automation Data//Abhi_Git_Revrsesand_new//Chic-Fila//cypress//integration//examples//Timken_LinkProduct//Timken_LinkPro//Timken_LinkPr.js"
+      
+    ],
+    "json": {
+      "enabled": true,
+      "formatter": "cypress/cucumber-json-formatter.exe",
+      "output": "cypress/integration/examples/cucumber_reports/IE_Automation.json"
+    }
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.0",
+    "@cypress/browserify-preprocessor": "latest",
+    "@faker-js/faker": "^8.0.2",
+    "cucumber-json-report-formatter": "^0.1.4",
+    "cypress-cucumber-tagging": "^1.0.3",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-iframe": "^1.0.1",
+    "cypress-plugin-playwright": "^1.0.3",
+    "faker": "^6.6.6",
+    "jsonpath": "^1.1.1",
+    "jwt-decode": "^3.1.2",
+    "multiple-cucumber-html-reporter": "^3.0.2",
+    "node-xlsx": "^0.21.0",
+    "rimraf": "^4.4.0",
+    "xlsx": "^0.18.5"
+  }
+}
